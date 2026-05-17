@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Historia II</title>
+
+<style>
+
+body{
+    margin:0;
+    background:#000;
+    font-family:Arial, sans-serif;
+}
+
+/* CONTENEDOR */
+
+.hero{
+    position:relative;
+    width:100%;
+    max-width:1200px;
+    margin:auto;
+    overflow:hidden;
+}
+
+/* IMAGEN */
+
+.hero img{
+    width:100%;
+    display:block;
+}
+
+/* CAPA OSCURA */
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.35);
+}
+
+/* TÍTULO */
+
+.title{
+    position:absolute;
+    bottom:6%;
+    width:100%;
+    text-align:center;
+    color:white;
+    font-size:clamp(2rem,6vw,5rem);
+    letter-spacing:4px;
+    text-shadow:0 0 20px rgba(0,0,0,0.8);
+    z-index:5;
+}
+
+/* RESPLANDOR DE HIDALGO */
+
+.hidalgo-glow{
+    position:absolute;
+
+    top:15%;
+    left:22%;
+    width:35%;
+    height:72%;
+
+    border-radius:45%;
+
+    opacity:0;
+    transition:all 0.4s ease;
+
+    box-shadow:
+        0 0 25px rgba(255,255,255,0.9),
+        0 0 60px rgba(255,255,255,0.8),
+        0 0 120px rgba(255,255,255,0.7);
+
+    background:rgba(255,255,255,0.08);
+
+    pointer-events:none;
+    z-index:3;
+}
+
+/* BOTÓN INVISIBLE */
+
+.hidalgo-hitbox{
+    position:absolute;
+
+    top:15%;
+    left:22%;
+    width:35%;
+    height:72%;
+
+    z-index:4;
+    cursor:pointer;
+}
+
+/* EFECTO */
+
+.hidalgo-hitbox:hover + .hidalgo-glow{
+    opacity:1;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+
+    <!-- IMAGEN -->
+    <img src="https://irlandesnuevolaredo.instructure.com/courses/2622/files/930637/preview">
+
+    <!-- OSCURECER -->
+    <div class="overlay"></div>
+
+    <!-- BOTÓN INVISIBLE -->
+    <div class="hidalgo-hitbox"></div>
+
+    <!-- BRILLO -->
+    <div class="hidalgo-glow"></div>
+
+    <!-- TÍTULO -->
+    <div class="title">
+        HISTORIA II
+    </div>
+
+</div>
+
+</body>
+</html>
